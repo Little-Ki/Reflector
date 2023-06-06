@@ -17,7 +17,7 @@ namespace refl {
 
       if (!refl::store::exists(m_cls_name)) return nullptr;
 
-      auto& meta = refl::store::get(m_cls_name);
+      auto meta = refl::store::get(m_cls_name);
 
       if (meta.m_ctors.find(hash) == meta.m_ctors.end()) return nullptr;
 
